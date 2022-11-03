@@ -1,6 +1,5 @@
 const { generateThreeRandomNums } = require('./modules/generateNums');
 const { gameFirstStart, baseBallGame } = require('./modules/game');
-const MissionUtils = require('@woowacourse/mission-utils');
 
 function App() {
   this.play = () => {

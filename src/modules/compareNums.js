@@ -1,5 +1,3 @@
-const MissionUtils = require('@woowacourse/mission-utils');
-
 function countStrike(computerNums, userInputNums) {
   let strikeCount = 0;
   const computerNumsArr = computerNums.split('');

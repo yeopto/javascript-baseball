@@ -1,8 +1,5 @@
 const MissionUtils = require('@woowacourse/mission-utils');
-const {
-  isThreeRandomNumbers,
-  isNotZeroInInputAndNotDoubleNum,
-} = require('./valid');
+const { isThreeRandomNumbers, isNotZeroInInputAndNotDoubleNum } = require('./valid');
 const { compareInputNum } = require('./compareNums');
 const { generateThreeRandomNums } = require('./generateNums');
 
