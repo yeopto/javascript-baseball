@@ -17,6 +17,7 @@ function baseBallGame(computerNums) {
     if (!isThreeRandomNumbers(userInputNums) || !isNotZeroInInputAndNotDoubleNum(userInputNums)) throw '잘못된 입력입니다.';
     console.log(compareInputNum(computerNums, userInputNums));
     if (computerNums !== userInputNums) baseBallGame(computerNums);
+    else console.log('3개의 숫자를 모두 맞히셨습니다! 게임 종료');
   });
   return;
 }
