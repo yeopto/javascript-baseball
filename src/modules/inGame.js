@@ -4,7 +4,7 @@ const { isThreeRandomNumbers, isNotZeroInInputAndNotDoubleNum } = require('./val
 function inGame(generateThreeRandomNums) {
   const computerNum = generateThreeRandomNums;
   MissionUtils.Console.readLine('숫자를 입력해주세요 : ', (answer) => {
-    console.log(answer);
+    if (!isThreeRandomNumbers(answer) || !isNotZeroInInputAndNotDoubleNum(answer)) throw '잘못된 입력입니다.';
   })
 }
 
