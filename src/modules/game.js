@@ -7,6 +7,7 @@ const { compareInputNum } = require('./compareNums');
 
 function gameFirstStart() {
   MissionUtils.Console.print('숫자 야구 게임을 시작합니다.');
+  return;
 }
 
 exports.gameFirstStart = gameFirstStart; 
@@ -17,6 +18,7 @@ function baseBallGame(computerNums) {
     console.log(compareInputNum(computerNums, userInputNums));
     if (computerNums !== userInputNums) baseBallGame(computerNums);
   });
+  return;
 }
 
 exports.baseBallGame = baseBallGame;
