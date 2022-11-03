@@ -1,11 +1,18 @@
 const MissionUtils = require('@woowacourse/mission-utils');
 
-class GameInit {
-  gameStart() {
-    MissionUtils.Console.print('숫자 야구 게임을 시작합니다.');
-  }
+function gameStart() {
+  MissionUtils.Console.print('숫자 야구 게임을 시작합니다.');
 }
 
-const gameInit = new GameInit();
+exports.gameStart = gameStart;
 
-exports.gameStart = gameInit.gameStart;
+function generateThreeRandomNums() {
+  const computer = [];
+  while (computer.length < 3) {
+    const number = MissionUtils.Random.pickNumberInRange(1, 9);
+    if (!computer.includes(number)) computer.push(number);
+  }
+  return computer;
+}
+
+exports.generateThreeRandomNums = generateThreeRandomNums;

@@ -1,9 +1,9 @@
 const { gameStart } = require('./modules/gameStart');
 
-class App {
-  play() {
+function App() {
+  this.play = () => {
     gameStart();
-  }
+  };
 }
 
 const app = new App();
