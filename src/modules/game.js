@@ -15,7 +15,7 @@ function baseBallGame(computerNums) {
   MissionUtils.Console.readLine('숫자를 입력해주세요 : ', (userInputNums) => {
     if (!isThreeRandomNumbers(userInputNums) || !isNotZeroInInputAndNotDoubleNum(userInputNums)) throw '잘못된 입력입니다.';
     console.log(compareInputNum(computerNums, userInputNums));
-    // if (computerNums !== userInputNums) baseBallGame(computerNums);
+    if (computerNums !== userInputNums) baseBallGame(computerNums);
   });
 }
 
