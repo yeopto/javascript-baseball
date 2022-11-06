@@ -1,3 +1,5 @@
+const { STRIKE, BALL, NOTHING } = require('../constants');
+
 function countStrike(computerNums, userInputNums) {
   let strikeCount = 0;
   const computerNumsArr = computerNums.split('');
@@ -28,10 +30,10 @@ function compareInputNum(computerNums, userInputNums) {
   const strikeCount = countStrike(computerNums, userInputNums);
   const ballCount = countBall(computerNums, userInputNums);
   
-  if (strikeCount === 0 && ballCount === 0) return '낫싱';
-  if (ballCount === 0) return `${strikeCount}스트라이크`;
-  if (strikeCount === 0) return `${ballCount}볼`;
-  return `${ballCount}볼 ${strikeCount}스트라이크`;
+  if (strikeCount === 0 && ballCount === 0) return NOTHING;
+  if (ballCount === 0) return `${strikeCount}${STRIKE}`;
+  if (strikeCount === 0) return `${ballCount}${BALL}`;
+  return `${ballCount}${BALL} ${strikeCount}${STRIKE}`;
 }
 
 exports.compareInputNum = compareInputNum;
