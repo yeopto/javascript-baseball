@@ -1,5 +1,5 @@
 const MissionUtils = require('@woowacourse/mission-utils');
-const { isThreeRandomNumbers, isNotZeroInInputAndNotDoubleNum } = require('./valid');
+const { isValidNum } = require('./isValidNum');
 const { compareInputNum } = require('./compareInputNum');
 const { generateRandomNum } = require('./generateRandomNum');
 
@@ -11,7 +11,7 @@ exports.gameFirstStart = gameFirstStart;
 
 function baseBallGame(computerNums) {
   MissionUtils.Console.readLine('숫자를 입력해주세요 : ', (userInputNums) => {
-    if (!isThreeRandomNumbers(userInputNums) || !isNotZeroInInputAndNotDoubleNum(userInputNums)) throw '잘못된 입력입니다.';
+    if (!isValidNum(userInputNums)) throw '잘못된 입력입니다.';
     MissionUtils.Console.print(compareInputNum(computerNums, userInputNums));
     if (computerNums !== userInputNums) return baseBallGame(computerNums);
     MissionUtils.Console.print('3개의 숫자를 모두 맞히셨습니다! 게임 종료');

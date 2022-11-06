@@ -12,8 +12,6 @@ function isThreeRandomNumbers(input) {
   return true;
 }
 
-exports.isThreeRandomNumbers = isThreeRandomNumbers;
-
 function isNotZeroInInputAndNotDoubleNum(input) {
   const inputArr = input.split('');
   let isZero = false;
@@ -29,4 +27,9 @@ function isNotZeroInInputAndNotDoubleNum(input) {
   return true;
 }
 
-exports.isNotZeroInInputAndNotDoubleNum = isNotZeroInInputAndNotDoubleNum;
+function isValidNum(input) {
+  if (isThreeRandomNumbers(input) && isNotZeroInInputAndNotDoubleNum(input)) return true;
+  return false;
+}
+
+exports.isValidNum = isValidNum;
