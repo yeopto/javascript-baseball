@@ -1,6 +1,6 @@
 const MissionUtils = require('@woowacourse/mission-utils');
 
-function generateThreeRandomNums() {
+function generateRandomNum() {
   const computer = [];
   while (computer.length < 3) {
     const number = MissionUtils.Random.pickNumberInRange(1, 9);
@@ -11,4 +11,4 @@ function generateThreeRandomNums() {
     .toString();
 }
 
-exports.generateThreeRandomNums = generateThreeRandomNums;
+exports.generateRandomNum = generateRandomNum;
