@@ -1,5 +1,5 @@
 const MissionUtils = require('@woowacourse/mission-utils');
-const GAME_MESSAGE = require('../constants');
+const { GAME_MESSAGE }= require('../constants');
 const { isValidNum } = require('./isValidNum');
 const { compareInputNum } = require('./compareInputNum');
 const { generateRandomNum } = require('./generateRandomNum');
