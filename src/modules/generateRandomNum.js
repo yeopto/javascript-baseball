@@ -6,9 +6,7 @@ function generateRandomNum() {
     const number = MissionUtils.Random.pickNumberInRange(1, 9);
     if (!computer.includes(number)) computer.push(number);
   }
-  return computer
-    .join('')
-    .toString();
+  return computer.join('');
 }
 
 exports.generateRandomNum = generateRandomNum;
