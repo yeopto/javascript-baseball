@@ -13,11 +13,11 @@ function gameReStartOrExit() {
   return;
 }
 
-function gameFirstStart() {
+function gameFirstStartMessage() {
   return MissionUtils.Console.print(GAME_MESSAGE.GAME_START_MESSAGE);
 }
 
-exports.gameFirstStart = gameFirstStart;
+exports.gameFirstStartMessage = gameFirstStartMessage;
 
 function baseBallGame(computerNums) {
   MissionUtils.Console.readLine(GAME_MESSAGE.USER_INPUT_MESSAGE, (userInputNums) => {

@@ -1,9 +1,9 @@
-const { gameFirstStart, baseBallGame } = require('./modules/game');
+const { gameFirstStartMessage, baseBallGame } = require('./modules/game');
 const { generateRandomNum } = require('./modules/generateRandomNum');
 
 function App() {
   this.play = () => {
-    gameFirstStart();
+    gameFirstStartMessage();
     baseBallGame(generateRandomNum());
   };
 }
