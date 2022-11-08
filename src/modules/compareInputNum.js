@@ -7,6 +7,7 @@ function countStrike(computerNums, userInputNums) {
 
   computerNumsArr.map((num, index) => {
     if (num === userInputNumsArr[index]) strikeCount += 1;
+    return num;
   });
 
   return strikeCount;
@@ -21,7 +22,8 @@ function countBall(computerNums, userInputNums) {
     if (index === 0 && (num === userInputNumsArr[1] || num === userInputNumsArr[2])) ballCount += 1;
     if (index === 1 && (num === userInputNumsArr[0] || num === userInputNumsArr[2])) ballCount += 1;
     if (index === 2 && (num === userInputNumsArr[0] || num === userInputNumsArr[1])) ballCount += 1;
-  })
+    return num;
+  });
 
   return ballCount;
 }
@@ -29,7 +31,7 @@ function countBall(computerNums, userInputNums) {
 function compareInputNum(computerNums, userInputNums) {
   const strikeCount = countStrike(computerNums, userInputNums);
   const ballCount = countBall(computerNums, userInputNums);
-  
+
   if (strikeCount === 0 && ballCount === 0) return RESULT.NOTHING;
   if (ballCount === 0) return `${strikeCount}${RESULT.STRIKE}`;
   if (strikeCount === 0) return `${ballCount}${RESULT.BALL}`;

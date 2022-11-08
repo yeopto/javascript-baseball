@@ -5,10 +5,11 @@ function isInteger(input) {
 function isThreeRandomNumbers(input) {
   const inputToNum = Number(input);
   if (
-    inputToNum === NaN || 
+    inputToNum === NaN ||
     !isInteger(inputToNum) ||
     !(inputToNum >= 100 && inputToNum <= 999)
-  ) return false;
+  )
+    return false;
   return true;
 }
 
@@ -17,18 +18,21 @@ function isNotZeroInInputAndNotDoubleNum(input) {
   let isZero = false;
   inputArr.map((num) => {
     if (num === '0') isZero = true;
-  })
+    return num;
+  });
   if (isZero) return false;
   if (
     inputArr[0] === inputArr[1] ||
     inputArr[1] === inputArr[2] ||
     inputArr[0] === inputArr[2]
-    ) return false;
+  )
+    return false;
   return true;
 }
 
 function isValidNum(input) {
-  if (isThreeRandomNumbers(input) && isNotZeroInInputAndNotDoubleNum(input)) return true;
+  if (isThreeRandomNumbers(input) && isNotZeroInInputAndNotDoubleNum(input))
+    return true;
   return false;
 }
 

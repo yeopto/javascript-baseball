@@ -8,7 +8,7 @@ function gameFirstStart() {
   return MissionUtils.Console.print(GAME_MESSAGE.GAME_START_MESSAGE);
 }
 
-exports.gameFirstStart = gameFirstStart; 
+exports.gameFirstStart = gameFirstStart;
 
 function baseBallGame(computerNums) {
   MissionUtils.Console.readLine(GAME_MESSAGE.USER_INPUT_MESSAGE, (userInputNums) => {
