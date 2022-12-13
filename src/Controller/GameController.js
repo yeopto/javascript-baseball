@@ -31,9 +31,9 @@ class GameController {
     const count = this.#tryCount.getTryCount();
     for (let i = 0; i < count; i++) {
       cars.forEach((car) => car.race());
-      OutputView.printResult(cars);
+      OutputView.printRaceResult(cars);
     }
-    OutputView.printWinner(cars);
+    OutputView.printFinalWinner(cars);
   }
 }
 
