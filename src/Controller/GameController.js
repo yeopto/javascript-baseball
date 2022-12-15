@@ -1,4 +1,4 @@
-const NumGenerator = require('../Model/NumGenerator');
+const NumGenerator = require('../Utils/NumGenerator');
 const BaseballGame = require('../Model/BaseballGame');
 const { INPUTNUM } = require('../Constants/constant');
 
