@@ -8,7 +8,7 @@ class BaseballGame {
   }
 
   match(userInput) {
-    const userNumArr = userInput.split(GAME.blank).map((num) => +num);
+    const userNumArr = userInput.split(GAME.blank).map(Number);
     let correctCount = this.takeCorrectCount(userNumArr);
     let strike = GAME.zeroNum;
     userNumArr.forEach((num, index) => {
