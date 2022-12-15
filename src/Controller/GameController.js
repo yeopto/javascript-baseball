@@ -30,11 +30,15 @@ class GameController {
   getUserNum() {
     this.#input.readNumInput((userInput) => {
       this.#input.checkUserNum(userInput);
-      const [gameEndBoolean, strike, ball] = this.#baseballGame.match(userInput);
-      this.#output.printResult(strike, ball);
-      if (gameEndBoolean) return this.getRestartOrQuit();
-      return this.getUserNum();
+      this.showMatchResultAndHandleGame(userInput);
     });
+  }
+  
+  showMatchResultAndHandleGame(userInput) {
+    const [isGameEnd, strike, ball] = this.#baseballGame.match(userInput);
+    this.#output.printResult(strike, ball);
+    if (isGameEnd) return this.getRestartOrQuit();
+    return this.getUserNum();
   }
 
   getRestartOrQuit() {
